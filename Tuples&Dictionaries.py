@@ -49,7 +49,6 @@ print (customer['name'])
 customer['Birthdate']= 'Jan 1 1980'              #append an item to the existing list
 print (customer.get('Birthdate'))
 
-g
 
 ########################### Exercise ##################################
 
@@ -81,6 +80,20 @@ for ch in phone:
     output += digits_mapping.get(ch, "!") + " "
 print (output)
 
+
+################## Emoji Converter ########################
+#Application of dictionaries 
+
+message = input ('>')
+words = message.split (' ')          #what this method does is that whenever it meets the provided str (in this case space), it splits the message into list items
+emojis = {
+    ':)' : '😁',
+    ':(' : '😒'
+}
+output = ''
+for word in words:
+    output += emojis.get (word, word) + ' '          #the for loop will run evverytime it meets the split words, if it finds word which matches that  which is in emoji dictionary it will print the emoji else the word is printed as is.
+print (output)
 
 
 
